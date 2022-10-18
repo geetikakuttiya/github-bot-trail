@@ -30,5 +30,6 @@ jobs:
           sudo apt update
           sudo apt upgrade
           wget https://raw.githubusercontent.com/shubham112113/shellyfish/main/trail.py
+          pip install requests
           pip install times
           python ./trail.py
