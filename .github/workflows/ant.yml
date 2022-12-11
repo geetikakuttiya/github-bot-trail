@@ -22,14 +22,15 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Action Is Working!
+        run: sudo apt update
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          sudo apt update
-          sudo apt upgrade
-          wget https://raw.githubusercontent.com/shubham112113/shellyfish/main/trail.py
-          pip install requests
-          pip install times
-          python ./trail.py
+          sudo apt upgrade -y
+          mkdir hello
+          cd hello
+          wget https://raw.githubusercontent.com/shubham112113/shellyfish/main/ants.sh
+          chmod +x ants.sh
+          sudo ./ants.sh
+          echo "work done"
